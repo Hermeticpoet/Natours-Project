@@ -134,11 +134,11 @@ html {
      display: inline-block;
      height: 100%;
      width: 100%;
-     border-radius: 10rem;
+     border-radius: 10rem;  
      position: absolute;
      top: 0;
      left: 0;
-     z-index: -1;
+     z-index: -1; 
      transition: all .4s;
  }
 
