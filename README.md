@@ -1,6 +1,6 @@
 # The Brief
 
-[Udemy course](https://www.udemy.com/course/advanced-css-and-sass/learn/lecture) that supports learning through the building of 3 projects. This is Project 1 from that course...
+[Udemy course](https://www.udemy.com/course/advanced-css-and-sass/learn/lecture) that supports learning through the building of 3 projects. This is Project 1 from that course... it will use Floats for the layout!
 
 ## Description
 

@@ -1,0 +1,23 @@
+/* 
+Root Font Size is Set in HTML Selector. Doing this allows us to 
+change global font size in one area and then have all sizes be responsive by using REMs. REMs are NOT supported in IE9 and below!! 
+
+Good convention is to put box-sizing on the body & then use * selector to inherit it!!
+*/
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    // This defines what 1rem is so will be here in Base file
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+}
