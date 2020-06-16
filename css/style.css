@@ -8,19 +8,29 @@ Dark green: #28b485
 */
 
  /* Resets */
- * {
+ *,
+ *::after,
+ *::before {
      margin: 0;
      padding: 0;
-     box-sizing: border-box;
+     box-sizing: inherit; /* force inheritance from body element declaration */
  }
+
+ /* Root Font Size is Set in HTML Selector. Doing this allows us to 
+    change global font size in one area and then have all sizes be responsive by using REMs. REMs are NOT supported in IE9 and below!! */
+
+html {
+    font-size: 62.5%; /* 10 / 16 (default) */
+}
 
  body {
      font-family: "Lato", sans-serif;
      font-weight: 400;
-     font-size: 16px;
      line-height: 1.7;
      color: #777;
-     padding: 30px; /* not inherited */
+     padding: 3rem; /* not inherited */
+
+     box-sizing: border-box; /* set this here & then force inheritance to ALL above */
  }
 
  .header {
@@ -37,17 +47,17 @@ Dark green: #28b485
      clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); /* create shape */
  }
 
- .logo-box {
+ .header__logo-box {
     position: absolute;
-    top: 40px;
-    left: 40px; 
+    top: 4rem;
+    left: 4rem; 
  }
 
- .logo {
-    height: 35px;
+ .header__logo {
+    height: 3.5rem;
  }
 
- .text-box {
+ .header__text-box {
      position: absolute;
      top: 40%;
      left: 50%;
@@ -58,17 +68,17 @@ Dark green: #28b485
  .heading-primary {
     color: #fff;
     text-transform: uppercase;
-    margin-bottom: 60px;
+    margin-bottom: 6rem;
 
     /* Stops the slight jank / shake when animating */
     backface-visibility: hidden;
  }
 
- .heading-primary-main {
+ .heading-primary--main {
     display: block;
-    font-size: 60px;
+    font-size: 6rem;
     font-weight: 400;
-    letter-spacing: 35px;
+    letter-spacing: 3.5rem;
 
     /* animation-name: moveInLeft; */
     /* animation-duration: 2s; */
@@ -79,11 +89,11 @@ Dark green: #28b485
     animation: moveInLeft 1s ease-out .2s;
  }
 
- .heading-primary-sub {
+ .heading-primary--sub {
      display: block;
-     font-size: 20px;
+     font-size: 2rem;
      font-weight: 700;
-     letter-spacing: 17.4px;
+     letter-spacing: 1.75rem;
 
      animation: moveInRight 1s ease-out .2s;
  }
@@ -92,28 +102,29 @@ Dark green: #28b485
  .btn:visited {
     text-transform: uppercase;
     text-decoration: none;
-    padding: 15px 40px;
+    padding: 1.5rem 4rem;
     display: inline-block;
-    border-radius: 100px;
+    border-radius: 10rem;
     transition: all .2s;
     position: relative;
+    font-size: 1.6rem;
  }
 
  .btn:hover {
      transform: translateY(-3px);
-    -webkit-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.5);
-    -moz-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.5);
-    box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0rem 1rem 2rem 0rem rgba(0,0,0,0.5);
+    -moz-box-shadow: 0rem 1rem 2rem 0rem rgba(0,0,0,0.5);
+    box-shadow: 0rem 1rem 2rem 0rem rgba(0,0,0,0.5);
  }
 
  .btn:active {
      transform: translateY(-1px);
-     -webkit-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.5);
-     -moz-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.5);
-     box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.5);
+     -webkit-box-shadow: 0rem .5rem 1rem 0rem rgba(0,0,0,0.5);
+     -moz-box-shadow: 0rem .5rem 1rem 0rem rgba(0,0,0,0.5);
+     box-shadow: 0rem .5rem 1rem 0rem rgba(0,0,0,0.5);
  }
 
- .btn-white {
+ .btn--white {
     background-color: #fff;
     color: #777;
  }
@@ -123,7 +134,7 @@ Dark green: #28b485
      display: inline-block;
      height: 100%;
      width: 100%;
-     border-radius: 100px;
+     border-radius: 10rem;
      position: absolute;
      top: 0;
      left: 0;
@@ -131,7 +142,7 @@ Dark green: #28b485
      transition: all .4s;
  }
 
- .btn-white::after {
+ .btn--white::after {
      background-color: #fff;
  }
 
@@ -140,7 +151,7 @@ Dark green: #28b485
      opacity: 0;
  }
 
- .btn-animated {
+ .btn--animated {
      animation: moveUpBottom .5s ease-out backwards .55s;
      /* animation-fill-mode: backwards; begins animation at start value */
  }
@@ -150,11 +161,11 @@ Dark green: #28b485
  @keyframes moveInLeft {
      0% {
         opacity: 0;
-        transform: translateX(-100px);
+        transform: translateX(-10rem);
      }
 
      80% {
-         transform: translateX(10px);
+         transform: translateX(1rem);
      }
 
      100% {
@@ -166,11 +177,11 @@ Dark green: #28b485
  @keyframes moveInRight {
      0% {
         opacity: 0;
-        transform: translateX(100px);
+        transform: translateX(10rem);
      }
 
      80% {
-         transform: translateX(-10px);
+         transform: translateX(-1rem);
      }
 
      100% {
@@ -182,7 +193,7 @@ Dark green: #28b485
  @keyframes moveUpBottom {
      0% {
         opacity: 0;
-        transform: translateY(40px);
+        transform: translateY(4rem);
      }
 
      100% {
