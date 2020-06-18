@@ -12,6 +12,8 @@
         left: 0;
         width: 100%;
         backface-visibility: hidden; // hide opposite side when not showing
+        border-radius: 3px;
+        box-shadow: $box-shadow-primary;
 
         &--front {
             background-color: $color-white;
