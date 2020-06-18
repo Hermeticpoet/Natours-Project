@@ -23,3 +23,7 @@ Learn complex CSS animations, advanced responsive design techniques, flexbox lay
 * The NPM ecosystem: development workflows and building processes
 * Get friendly and fast support in the course Q&A
 * Downloadable lectures, code and design assets for all projects
+
+#### Credits
+
+All images used in this project have been obtained under Free to Use commons licensing from [Unsplash](https://unsplash.com/).
