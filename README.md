@@ -27,3 +27,4 @@ Learn complex CSS animations, advanced responsive design techniques, flexbox lay
 #### Credits
 
 All images used in this project have been obtained under Free to Use commons licensing from [Unsplash](https://unsplash.com/).
+The background video used was also obtained under Free to Use commons licensing from [Coverr](https://coverr.co/).
