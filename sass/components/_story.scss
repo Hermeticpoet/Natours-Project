@@ -1,0 +1,32 @@
+.story {
+    width: 75%;
+    margin: 0 auto;
+    box-shadow: 0 3rem 6rem rgba($color-black, .1);
+    background-color: $color-white;
+    border-radius: 3px;
+    padding: 6rem;
+    padding-left: 9rem;
+    font-size: $default-font-size;
+    transform: skewX(-12deg);
+
+    &__shape {
+        width: 15rem;
+        height: 15rem;
+        float: left;
+        background-color: orangered;
+        -webkit-shape-outside: circle(50% at 50% 50%); // This makes elements float AROUND this element (wrap text) **
+        shape-outside: circle(50% at 50% 50%); // radius @ x then y coordinate. MUST be floated & have defined width & height too **
+        -webkit-clip-path: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%);
+        transform: translateX(-3rem) skewX(12deg); // don't use margin to move elements away from floted elements
+    }
+
+    &__img {
+        height: 100%;
+    }
+
+    &__text {
+        transform: skewX(12deg);
+    }
+}
+
