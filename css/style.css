@@ -130,7 +130,7 @@ body {
     width: 100%;
     object-fit: cover; }
 
-.btn:link, .btn:visited {
+.btn, .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 1.5rem 4rem;
@@ -400,7 +400,6 @@ body {
   top: -.5rem; }
   .form__radio-button::after {
     content: "";
-    display: block;
     height: 1.3rem;
     width: 1.3rem;
     border-radius: 50%;
