@@ -6,6 +6,32 @@
     width: 100%;
     background-color: rgba($color-black, .85);
     z-index: 399;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
+
+    &:target {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &__close {
+        &:link,
+        &:visited {
+            color: $color-grey-dark;
+            position: absolute;
+            top: 2.5rem;
+            right: 2.5rem;
+            font-size: 3rem;
+            text-decoration: none;
+            display: inline-block;
+            transition: all .2s;
+        }
+
+        &:hover {
+            color: $color-primary;
+        }
+    }
 
     &__content {
         @include centerHorizontalVertical;
@@ -38,11 +64,18 @@
         font-size: 1.3rem;
         margin-bottom: 4rem;
 
+        -moz-column-count: 2;
+        -moz-column-gap: 3rem;
+        -moz-column-rule: 1px solid $color-grey-light-2;
+
         column-count: 2;
         column-gap: 3rem;
         column-rule: 1px solid $color-grey-light-2;
 
         -webkit-hyphens: auto;
+        -moz-hyphens: auto;
+        -o-hyphens: auto;
+        -ms-hyphens: auto;
         hyphens: auto;
     }
 }
