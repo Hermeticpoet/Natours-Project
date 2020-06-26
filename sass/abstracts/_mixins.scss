@@ -30,6 +30,8 @@ $breakpoint argument choices:
 - big-desk
 */
 
+// ORDER: Base + Typography > general layout + grid > page layout > components
+
 /* 1em = 16px [allows for user defined in browser] */
 @mixin respond($breakpoint) {
     @if $breakpoint == phone {
