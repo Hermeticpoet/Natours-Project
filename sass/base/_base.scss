@@ -15,9 +15,23 @@ Good convention is to put box-sizing on the body & then use * selector to inheri
 
 html {
     // This defines what 1rem is so will be here in Base file
-    font-size: 62.5%;
+    font-size: 62.5%; // 1rem = 10px : 10px/16px = 62.5%
+
+
+    @include respond(tab-land) { // 1 rem = 9px : 9px/16px = 56.2%
+        font-size: 56.25%;
+    }
+
+    @include respond(tab-port) {  // 1 rem = 8px : 8px/16px = 50%
+        font-size: 50%;
+    }
+
+    @include respond(big-desk) { // 1 rem = 12px : 12px/16px = 75%
+        font-size: 75%;
+    }
 }
 
 body {
     box-sizing: border-box;
 }
+

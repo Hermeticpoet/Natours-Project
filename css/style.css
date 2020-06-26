@@ -1,3 +1,18 @@
+/*
+0 - 600:        Phone
+600 - 900:      Tablet portrait
+900 - 1200:     Tablet landscape
+1200 - 1800:    Desktop ( normal styles for this project )
+1800 +:         Big desktop
+*/
+/* 
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desk
+*/
+/* 1em = 16px [allows for user defined in browser] */
 /* 
 Browser performance is best with only 2 properties animating 
 */
@@ -44,6 +59,15 @@ Good convention is to put box-sizing on the body & then use * selector to inheri
 
 html {
   font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   box-sizing: border-box; }
