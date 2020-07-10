@@ -167,10 +167,10 @@
         }
 
         &__details {
-            padding: 0 3rem;
+            padding: 1rem 3rem;
         }
 
-        // Back Side Styling
+        // Front Side Styling
         &__cta {
             position: relative;
             top: 0;
@@ -185,7 +185,7 @@
         }
 
         &__price-value {
-            font-size: 6rem;
+            font-size: 4rem;
         }
     }
 }
